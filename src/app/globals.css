@@ -16,10 +16,6 @@
   }
 }
 
-.icon {
-  @apply w-4 h-4;
-}
-
 body {
   color: var(--foreground);
   background: var(--background);
@@ -49,6 +45,11 @@ body {
 
 .form{
 
+}
+
+.user-img{
+  overflow:hidden;
+  @apply flex justify-center items-center;
 }
 
 textarea {
