@@ -16,6 +16,10 @@
   }
 }
 
+.icon {
+  @apply w-5 h-5;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);

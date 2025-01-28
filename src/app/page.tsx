@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { IoGlobeOutline } from "react-icons/io5"; // Importando o ícone específico
 
 export default function Home() {
   return (
@@ -25,8 +26,8 @@ export default function Home() {
             <form action="">
               <div className="flex flex-col gap-4 border-neutral-800 px-2 pb-4 border-b-2 w-full">
                 <input type="text" name="" id="" title="Input field" placeholder="What is happening?!" />
-                <a className="font-bold text-sm replace-private" href="">
-                  <ion-icon name="globe"></ion-icon>
+                <a className="flex items-center gap-1 font-bold text-sm replace-private" href="">
+                  <IoGlobeOutline className="icon" />
                   <p>Everyone can reply</p>
                 </a>
               </div>
