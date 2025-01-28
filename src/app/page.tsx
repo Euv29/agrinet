@@ -26,11 +26,10 @@ export default function Home() {
               <div className="flex flex-col gap-4 border-neutral-800 px-2 pb-4 border-b-2 w-full">
                 <input type="text" name="" id="" title="Input field" placeholder="What is happening?!" />
                 <a className="font-bold text-sm replace-private" href="">
-                  <i className="ion-icon ion-md-heart"></i>
+                  <ion-icon name="globe"></ion-icon>
                   <p>Everyone can reply</p>
                 </a>
               </div>
-
             </form>
           </section>
         </section>

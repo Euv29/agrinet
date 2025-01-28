@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "~ionicons/dist/css/ionicons.min.css";
-
 :root {
   --primary-color: #1d9bf0;
   --background: #ffffff;
@@ -24,9 +22,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.option-feed:hover{
+.option-feed:hover {
   @apply bg-neutral-800;
-  transition: all 0.3s ease;
 }
 
 .option-feed.active p{
