@@ -18,14 +18,14 @@ export default function Home() {
             <div className="borda"></div>
           </a>
         </section>
-        <section className="flex justify-center px-4 py-4 w-full min-h-16 post-form">
+        <section className="flex justify-center gap-2 px-4 py-4 w-full min-h-16 post-form">
           <section className="bg-neutral-800 rounded-full w-[50px] h-[50px] user-im">
             <Image src="/img/user.png" alt="user" width={40} height={40} />
           </section>
-          <section className="py-1 w-10/12 form">
+          <section className="py-1 w-[90%] form">
             <form action="">
               <div className="flex flex-col gap-4 border-neutral-800 px-2 pb-4 border-b-2 w-full">
-                <input type="text" name="" id="" title="Input field" placeholder="What is happening?!" />
+                <textarea name="" id="" title="Input field" placeholder="What is happening?!" />
                 <a className="flex items-center gap-1 font-bold text-sm replace-private" href="">
                   <FaGlobeAmericas className="icon" />
                   <p>Everyone can reply</p>
