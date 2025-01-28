@@ -16,6 +16,15 @@
   }
 }
 
+.icon {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.text-primary{
+  color: var(--primary-color);
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
@@ -52,14 +61,35 @@ body {
   @apply flex justify-center items-center;
 }
 
-textarea {
+textarea,
+.post-textarea {
   outline: none;
   resize: none;
-  @apply border-neutral-500 bg-transparent font-normal text-lg text-neutral-200;
+  @apply bg-transparent font-normal text-lg text-neutral-200;
 }
 
 textarea:focus {
   outline: none;
+}
+
+.input-textarea {
+  border-bottom-width: 2px;
+  /* border-color: transparent; */
+  border-color: #262626;
+}
+
+textarea:focus + .input-textarea{
+  border-color: #262626;
+}
+
+.replace-private{
+  display: none;
+}
+
+textarea:focus + .replace-private,
+.replace-private:hover{
+  transition: all 0.5s;
+  display: flex;
 }
 
 .replace-private{
