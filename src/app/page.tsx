@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-row justify-items-center items-center min-h-screen page-screen">
-      <header className="flex flex-col justify-between items-center px-4 py-3 md:w-2/4 h-full min-h-screen">
+      <header className="md:flex flex-col justify-between items-center hidden px-4 py-3 md:w-2/4 h-full min-h-screen">
         <nav className="flex flex-col justify-between h-full">
           <section className="flex flex-col gap-2 h-full">
             <a href="#" className="flex items-center gap-2 px-2 text-lg text-neutral-200">
@@ -38,7 +38,7 @@ export default function Home() {
             <MenuOption href="#" icon={IoEllipsisHorizontalOutline} label="More" />
             <Button className="md:flex hidden px-24 py-4 w-full font-bold btn-neutral" type="button">Post</Button>
           </section>
-          <a href=""  className="flex justify-between items-center w-full menu-option profile-info user-option">
+          <a href="" className="flex justify-between items-center w-full menu-option profile-info user-option">
             <section className="md:flex items-center gap-2 hidden">
               <section className="bg-neutral-800 rounded-full w-[50px] h-[50px] user-img">
                 <Image src="/image.jpg" alt="user" width={100} height={100} />
@@ -48,7 +48,7 @@ export default function Home() {
                 <p className="text-neutral-600 text-xs">@johndoe</p>
               </section>
             </section>
-              <IoEllipsisHorizontalOutline className="md:flex hidden icon menu-icon" />
+            <IoEllipsisHorizontalOutline className="md:flex hidden icon menu-icon" />
           </a>
         </nav>
       </header>
@@ -123,8 +123,15 @@ export default function Home() {
         </section>
       </main>
       <footer className="md:flex hidden w-2/3 min-h-screen">
-      
+
       </footer>
+      <nav className="right-0 bottom-0 left-0 fixed flex justify-around items-center md:hidden bg-neutral-900 p-2">
+        <MenuOption href="#" icon={IoHomeOutline} label="Home" />
+        <MenuOption href="#" icon={IoSearchOutline} label="Explore" />
+        <MenuOption href="#" icon={IoNotificationsOutline} label="Notifications" />
+        <MenuOption href="#" icon={IoMailOutline} label="Messages" />
+        <MenuOption href="#" icon={IoPersonOutline} label="Profile" />
+      </nav>
     </div>
   );
 }
