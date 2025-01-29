@@ -9,6 +9,7 @@ import { useRef } from "react";
 
 import Button from "../components/Button"; // Importando o componente de botão
 import Post from "../components/Post"; // Importando o componente de post
+import MenuOption from "../components/MenuOption"; // Importando o componente de menu
 
 export default function Home() {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -28,37 +29,16 @@ export default function Home() {
             <a href="#" className="flex items-center gap-2 px-2 text-lg text-neutral-200">
               <Image src="/x-logo.svg" alt="Logo" width={30} height={30} />
             </a>
-            <a href="#" className="flex items-center gap-2 text-lg text-neutral-200 menu-option">
-              <IoHomeOutline className="icon menu-icon" />
-              <span className="md:flex hidden text-xl">Home</span>
-            </a>
-            <a href="#" className="flex items-center gap-2 text-lg text-neutral-200 menu-option">
-              <IoSearchOutline className="icon menu-icon" />
-              <span className="md:flex hidden text-xl">Explore</span>
-            </a>
-            <a href="#" className="flex items-center gap-2 text-lg text-neutral-200 menu-option">
-              <IoNotificationsOutline className="icon menu-icon" />
-              <span className="md:flex hidden text-xl">Notifications</span>
-            </a>
-            <a href="#" className="flex items-center gap-2 text-lg text-neutral-200 menu-option">
-              <IoMailOutline className="icon menu-icon" />
-              <span className="md:flex hidden text-xl">Messages</span>
-            </a>
-            <a href="#" className="flex items-center gap-2 text-lg text-neutral-200 menu-option">
-              <IoPeopleOutline className="icon menu-icon" />
-              <span className="md:flex hidden text-xl">Communities</span>
-            </a>
-            <a href="#" className="flex items-center gap-2 text-lg text-neutral-200 menu-option">
-              <IoPersonOutline className="icon menu-icon" />
-              <span className="md:flex hidden text-xl">Profile</span>
-            </a>
-            <a href="#" className="flex items-center gap-2 text-lg text-neutral-200 menu-option">
-              <IoEllipsisHorizontalOutline className="icon menu-icon" />
-              <span className="md:flex hidden text-xl">More</span>
-            </a>
+            <MenuOption href="#" icon={IoHomeOutline} label="Home" />
+            <MenuOption href="#" icon={IoSearchOutline} label="Explore" />
+            <MenuOption href="#" icon={IoNotificationsOutline} label="Notifications" />
+            <MenuOption href="#" icon={IoMailOutline} label="Messages" />
+            <MenuOption href="#" icon={IoPeopleOutline} label="Communities" />
+            <MenuOption href="#" icon={IoPersonOutline} label="Profile" />
+            <MenuOption href="#" icon={IoEllipsisHorizontalOutline} label="More" />
             <Button className="px-24 py-4 w-full font-bold btn-neutral" type="button">Post</Button>
           </section>
-          <section className="flex justify-between items-center w-full menu-option profile-info">
+          <section className="flex justify-between items-center w-full menu-option profile-info user-option">
             <section className="flex items-center gap-2">
               <section className="bg-neutral-800 rounded-full w-[50px] h-[50px] user-img">
                 <Image src="/image.jpg" alt="user" width={100} height={100} />
@@ -68,18 +48,20 @@ export default function Home() {
                 <p className="text-neutral-600 text-xs">@johndoe</p>
               </section>
             </section>
-            <IoEllipsisHorizontalOutline className="icon menu-icon" />
+            <a href="">
+              <IoEllipsisHorizontalOutline className="icon menu-icon" />
+            </a>
           </section>
         </nav>
       </header>
       <main className="border-neutral-800 border-r-2 border-l-2 w-full min-h-screen">
         <h1 className="flex md:hidden px-4 py-2 font-bold page-title">Home</h1>
         <section className="flex border-neutral-800 border-b-2 w-full min-h-14 slect-feed">
-          <a href="" className="flex flex-col justify-center items-center w-1/2 active option-feed">
+          <a key="for-you" href="" className="flex flex-col justify-center items-center w-1/2 active option-feed">
             <p className="font-semibold text-sm">For You</p>
             <div className="borda"></div>
           </a>
-          <a href="" className="flex flex-col justify-center items-center w-1/2 option-feed">
+          <a key="following" href="" className="flex flex-col justify-center items-center w-1/2 option-feed">
             <p className="font-semibold text-sm">Following</p>
             <div className="borda"></div>
           </a>
