@@ -40,8 +40,8 @@ export default function Home() {
           </section>
           <a href="" className="flex justify-between items-center w-full menu-option profile-info user-option">
             <section className="md:flex items-center gap-2 hidden">
-              <section className="bg-neutral-800 rounded-full w-[50px] h-[50px] user-img">
-                <Image src="/image.jpg" alt="user" width={100} height={100} />
+              <section className="bg-neutral-800 rounded-full user-img">
+                <Image src="/image.jpg" alt="user" width={50} height={50} className="object-cover" />
               </section>
               <section className="flex flex-col items-center gap-1">
                 <h2 className="font-bold text-sm">John Doe</h2>
@@ -65,8 +65,8 @@ export default function Home() {
           </a>
         </section>
         <section className="flex justify-center gap-2 border-neutral-800 px-4 py-4 border-b-2 w-full min-h-16 post-form">
-          <section className="bg-neutral-800 rounded-full w-[50px] h-[50px] user-img">
-            <Image src="/image.jpg" alt="user" width={100} height={100} />
+          <section className="bg-neutral-800 rounded-full user-img">
+            <Image src="/image.jpg" alt="user" width={50} height={50} className="object-cover" />
           </section>
           <section className="py-1 w-[90%] form">
             <form action="">
