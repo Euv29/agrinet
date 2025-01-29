@@ -20,18 +20,18 @@ const Post: React.FC<PostProps> = ({ userImage, userName, content, likes, commen
       <section className="rounded-full min-w-1/3 user-img">
         <Image src={userImage} alt={userName} width={50} height={50} className="object-cover" />
       </section>
-      <section className="flex flex-col gap-2">
+      <section className="flex flex-col gap-2 w-[85%]">
         <div className="flex items-center gap-1">
           <h3 className="font-semibold text-lg">{userName}</h3>
           <span className="text-neutral-600">{userArroba}</span>
         </div>
-        <p className="min-h-8 text-neutral-200 text-sm">{content}</p>
+        <p className="w-full min-h-8 text-neutral-200 text-sm post-ontent">{content}</p>
         {postImage && (
           <a href="" className="bg-slate-400 rounded-3xl post-img-section">
             <Image src={postImage} alt="Post image" width={500} height={500} className="object-cover" />
           </a>
         )}
-        <section className="flex justify-between mt-2 text-primary">
+        <section className="flex justify-between mt-2 w-full text-primary">
           <a href="#" className="flex items-center gap-1 icon-hover-comments">
             <IoChatbubbleOutline className="icon post-icon" />
             <span>{comments}</span>

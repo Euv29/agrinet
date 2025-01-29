@@ -211,6 +211,10 @@ button {
   overflow: hidden
 }
 
+.post-ontent{
+  @apply flex flex-col gap-4 min-w-full;
+}
+
 /* Search Input */
 .search-input {
   @apply rounded-full;
