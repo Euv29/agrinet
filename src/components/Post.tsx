@@ -32,7 +32,7 @@ const Post: React.FC<PostProps> = ({ userImage, userName, content, likes, commen
           </section>
         )}
         <section className="flex justify-between mt-2 text-primary">
-          <a href="#" className="flex items-center gap-1 icon-hover-comments">
+        <a href="#" className="flex items-center gap-1 icon-hover-comments">
             <IoChatbubbleOutline className="icon post-icon" />
             <span>{comments}</span>
           </a>

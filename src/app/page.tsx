@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { IoGlobeOutline, IoHomeOutline, IoSearchOutline, IoNotificationsOutline, IoMailOutline } from "react-icons/io5";
+import { IoGlobeOutline, IoHomeOutline, IoSearchOutline, IoNotificationsOutline, IoMailOutline, IoPeopleOutline, IoPersonOutline, IoEllipsisHorizontalOutline } from "react-icons/io5";
 import { FaRegImage } from "react-icons/fa6";
 import { HiOutlineGif } from "react-icons/hi2";
 import { IoLocationOutline } from "react-icons/io5";
@@ -22,24 +22,54 @@ export default function Home() {
 
   return (
     <div className="flex flex-row justify-items-center items-center min-h-screen page-screen">
-      <header className="flex flex-col items-center p-4 md:w-2/4 min-h-screen">
-        <nav className="flex flex-col gap-4">
-          <a href="#" className="flex items-center gap-2 text-lg text-neutral-200 hover:text-primary">
-            <IoHomeOutline className="icon" />
-            <span className="md:flex hidden">Home</span>
-          </a>
-          <a href="#" className="flex items-center gap-2 text-lg text-neutral-200 hover:text-primary">
-            <IoSearchOutline className="icon" />
-            <span className="md:flex hidden">Explore</span>
-          </a>
-          <a href="#" className="flex items-center gap-2 text-lg text-neutral-200 hover:text-primary">
-            <IoNotificationsOutline className="icon" />
-            <span className="md:flex hidden">Notifications</span>
-          </a>
-          <a href="#" className="flex items-center gap-2 text-lg text-neutral-200 hover:text-primary">
-            <IoMailOutline className="icon" />
-            <span className="md:flex hidden">Messages</span>
-          </a>
+      <header className="flex flex-col justify-between items-center px-4 py-3 md:w-2/4 h-full min-h-screen">
+        <nav className="flex flex-col justify-between h-full">
+          <section className="flex flex-col gap-2 h-full">
+            <a href="#" className="flex items-center gap-2 text-lg text-neutral-200 menu-option">
+              <Image src="/x-logo.svg" alt="Logo" width={30} height={30} />
+            </a>
+            <a href="#" className="flex items-center gap-2 text-lg text-neutral-200 menu-option">
+              <IoHomeOutline className="icon menu-icon" />
+              <span className="md:flex hidden text-xl">Home</span>
+            </a>
+            <a href="#" className="flex items-center gap-2 text-lg text-neutral-200 menu-option">
+              <IoSearchOutline className="icon menu-icon" />
+              <span className="md:flex hidden text-xl">Explore</span>
+            </a>
+            <a href="#" className="flex items-center gap-2 text-lg text-neutral-200 menu-option">
+              <IoNotificationsOutline className="icon menu-icon" />
+              <span className="md:flex hidden text-xl">Notifications</span>
+            </a>
+            <a href="#" className="flex items-center gap-2 text-lg text-neutral-200 menu-option">
+              <IoMailOutline className="icon menu-icon" />
+              <span className="md:flex hidden text-xl">Messages</span>
+            </a>
+            <a href="#" className="flex items-center gap-2 text-lg text-neutral-200 menu-option">
+              <IoPeopleOutline className="icon menu-icon" />
+              <span className="md:flex hidden text-xl">Communities</span>
+            </a>
+            <a href="#" className="flex items-center gap-2 text-lg text-neutral-200 menu-option">
+              <IoPersonOutline className="icon menu-icon" />
+              <span className="md:flex hidden text-xl">Profile</span>
+            </a>
+            <a href="#" className="flex items-center gap-2 text-lg text-neutral-200 menu-option">
+              <IoEllipsisHorizontalOutline className="icon menu-icon" />
+              <span className="md:flex hidden text-xl">More</span>
+            </a>
+            <Button className="px-24 py-4 w-full font-bold btn-neutral" type="button">Post</Button>
+          </section>
+          <section className="flex justify-between items-center w-full menu-option profile-info">
+            <section className="flex items-center gap-2">
+              <section className="bg-neutral-800 rounded-full w-[50px] h-[50px] user-img">
+                <Image src="/img/image" alt="user" width={100} height={100} />
+              </section>
+              <section className="flex flex-col items-center gap-1">
+                <h2 className="font-bold text-sm">John Doe</h2>
+                <p className="text-neutral-600 text-xs">@johndoe</p>
+              </section>
+            </section>
+            <IoEllipsisHorizontalOutline className="icon menu-icon" />
+          </section>
         </nav>
       </header>
       <main className="border-neutral-800 border-r-2 border-l-2 w-full min-h-screen">
