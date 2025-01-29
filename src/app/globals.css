@@ -105,7 +105,7 @@ body {
 }
 
 .menu-option:hover {
-  @apply bg-neutral-800;
+  @apply bg-neutral-900;
   transition: all 0.5s;
 }
 

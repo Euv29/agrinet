@@ -38,7 +38,7 @@ export default function Home() {
             <MenuOption href="#" icon={IoEllipsisHorizontalOutline} label="More" />
             <Button className="px-24 py-4 w-full font-bold btn-neutral" type="button">Post</Button>
           </section>
-          <section className="flex justify-between items-center w-full menu-option profile-info user-option">
+          <a href=""  className="flex justify-between items-center w-full menu-option profile-info user-option">
             <section className="flex items-center gap-2">
               <section className="bg-neutral-800 rounded-full w-[50px] h-[50px] user-img">
                 <Image src="/image.jpg" alt="user" width={100} height={100} />
@@ -48,10 +48,8 @@ export default function Home() {
                 <p className="text-neutral-600 text-xs">@johndoe</p>
               </section>
             </section>
-            <a href="">
               <IoEllipsisHorizontalOutline className="icon menu-icon" />
-            </a>
-          </section>
+          </a>
         </nav>
       </header>
       <main className="border-neutral-800 border-r-2 border-l-2 w-full min-h-screen">
