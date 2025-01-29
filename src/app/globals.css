@@ -101,7 +101,7 @@ body {
 
 /* Menu */
 .menu-option {
-  @apply flex gap-4 p-2 rounded-full;
+  @apply flex gap-4 px-2 py-2 rounded-full;
 }
 
 .menu-option:hover {

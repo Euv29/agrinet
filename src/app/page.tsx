@@ -24,8 +24,8 @@ export default function Home() {
     <div className="flex flex-row justify-items-center items-center min-h-screen page-screen">
       <header className="flex flex-col justify-between items-center px-4 py-3 md:w-2/4 h-full min-h-screen">
         <nav className="flex flex-col justify-between h-full">
-          <section className="flex flex-col gap-2 h-full">
-            <a href="#" className="flex items-center gap-2 text-lg text-neutral-200 menu-option">
+          <section className="flex flex-col gap-1 h-full">
+            <a href="#" className="flex items-center gap-2 px-2 text-lg text-neutral-200">
               <Image src="/x-logo.svg" alt="Logo" width={30} height={30} />
             </a>
             <a href="#" className="flex items-center gap-2 text-lg text-neutral-200 menu-option">
