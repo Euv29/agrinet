@@ -1,47 +1,64 @@
 import Image from "next/image";
-import { IoHeartOutline, IoChatbubbleOutline, IoShareOutline } from "react-icons/io5";
+import { IoHeartOutline, IoChatbubbleOutline, IoShareOutline, IoBarChartOutline, IoRepeatOutline, IoBookmarkOutline } from "react-icons/io5";
 
 interface PostProps {
   userImage: string;
   userName: string;
   content: string;
+  userArroba: string;
   likes: number;
   comments: number;
   shares: number;
   reach: number;
+  reposts: number;
+  postImage?: string;
 }
 
-const Post: React.FC<PostProps> = ({ userImage, userName, content, likes, comments, shares, reach }) => {
+const Post: React.FC<PostProps> = ({ userImage, userName, content, likes, comments, userArroba, reach, reposts, postImage }) => {
   return (
-    <div className="flex gap-4 border-neutral-800 p-4 border-b">
-      <div className="rounded-full w-[50px] h-[50px] overflow-hidden">
+    <section className="flex gap-4 border-neutral-800 p-4 border-b">
+      <section className="rounded-full w-[50px] h-[50px] overflow-hidden">
         <Image src={userImage} alt={userName} width={50} height={50} />
-      </div>
-      <div className="flex flex-col w-full">
-        <div className="flex justify-between items-center">
+      </section>
+      <section className="flex flex-col gap-2 w-full">
+        <div className="flex items-center gap-1">
           <h3 className="font-semibold text-lg">{userName}</h3>
+          <span className="text-neutral-600">{userArroba}</span>
         </div>
-        <p className="text-neutral-200 text-sm">{content}</p>
-        <div className="flex gap-4 mt-2 text-primary">
-          <a href="#" className="flex items-center gap-1">
-            <IoHeartOutline className="icon" />
-            <span>{likes}</span>
-          </a>
-          <a href="#" className="flex items-center gap-1">
-            <IoChatbubbleOutline className="icon" />
+        <p className="min-h-8 text-neutral-200 text-sm">{content}</p>
+        {postImage && (
+          <section className="bg-slate-400 post-img-section">
+            <Image src={postImage} alt="Post image" width={500} height={500} />
+          </section>
+        )}
+        <section className="flex justify-between mt-2 text-primary">
+          <a href="#" className="flex items-center gap-1 icon-hover-comments">
+            <IoChatbubbleOutline className="icon post-icon" />
             <span>{comments}</span>
           </a>
-          <a href="#" className="flex items-center gap-1">
-            <IoShareOutline className="icon" />
-            <span>{shares}</span>
+          <a href="#" className="flex items-center gap-1 icon-hover-reposts">
+            <IoRepeatOutline className="icon post-icon" />
+            <span>{reposts}</span>
           </a>
-          <div className="flex items-center gap-1">
-            <span>Reach:</span>
+          <a href="#" className="flex items-center gap-1 icon-hover-likes">
+            <IoHeartOutline className="icon post-icon" />
+            <span>{likes}</span>
+          </a>
+          <a href="#" className="flex items-center gap-1 icon-hover-reach">
+            <IoBarChartOutline className="icon post-icon" />
             <span>{reach}</span>
+          </a>
+          <div className="flex gap-2">
+            <a href="#" className="flex items-center gap-1 icon-hover-bookmark">
+              <IoBookmarkOutline className="icon post-icon" />
+            </a>
+            <a href="#" className="flex items-center gap-1 icon-hover-share post-icon">
+              <IoShareOutline className="icon post-icon" />
+            </a>
           </div>
-        </div>
-      </div>
-    </div>
+        </section>
+      </section>
+    </section>
   );
 };
 
