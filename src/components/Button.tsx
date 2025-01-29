@@ -13,7 +13,7 @@ const Button: React.FC<ButtonProps> = ({ children, onClick, className, type = "b
     <button
       type={type}
       onClick={onClick}
-      className={` ${className}`}
+      className={`font-bold ${className}`}
     >
       {children}
     </button>

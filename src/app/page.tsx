@@ -24,7 +24,7 @@ export default function Home() {
     <div className="flex flex-row justify-items-center items-center min-h-screen page-screen">
       <header className="flex flex-col justify-between items-center px-4 py-3 md:w-2/4 h-full min-h-screen">
         <nav className="flex flex-col justify-between h-full">
-          <section className="flex flex-col gap-1 h-full">
+          <section className="flex flex-col gap-2 h-full">
             <a href="#" className="flex items-center gap-2 px-2 text-lg text-neutral-200">
               <Image src="/x-logo.svg" alt="Logo" width={30} height={30} />
             </a>
@@ -61,7 +61,7 @@ export default function Home() {
           <section className="flex justify-between items-center w-full menu-option profile-info">
             <section className="flex items-center gap-2">
               <section className="bg-neutral-800 rounded-full w-[50px] h-[50px] user-img">
-                <Image src="/img/image" alt="user" width={100} height={100} />
+                <Image src="/image.jpg" alt="user" width={100} height={100} />
               </section>
               <section className="flex flex-col items-center gap-1">
                 <h2 className="font-bold text-sm">John Doe</h2>
@@ -86,7 +86,7 @@ export default function Home() {
         </section>
         <section className="flex justify-center gap-2 border-neutral-800 px-4 py-4 border-b-2 w-full min-h-16 post-form">
           <section className="bg-neutral-800 rounded-full w-[50px] h-[50px] user-img">
-            <Image src="/img/image" alt="user" width={100} height={100} />
+            <Image src="/image.jpg" alt="user" width={100} height={100} />
           </section>
           <section className="py-1 w-[90%] form">
             <form action="">
@@ -130,7 +130,7 @@ export default function Home() {
             postImage="/image.jpg"
           />
           <Post
-            userImage="/image2.jpg"
+            userImage="/image.jpg"
             userName="Jane Smith"
             content="Another example post without an image."
             likes={20}
