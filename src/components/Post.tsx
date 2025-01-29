@@ -27,7 +27,7 @@ const Post: React.FC<PostProps> = ({ userImage, userName, content, likes, commen
         </div>
         <p className="min-h-8 text-neutral-200 text-sm">{content}</p>
         {postImage && (
-          <a href="" className="bg-slate-400 post-img-section">
+          <a href="" className="bg-slate-400 rounded-3xl post-img-section">
             <Image src={postImage} alt="Post image" width={500} height={500} className="object-cover" />
           </a>
         )}

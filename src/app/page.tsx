@@ -13,11 +13,23 @@ import MenuOption from "../components/MenuOption"; // Importando o componente de
 
 export default function Home() {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+  const searchContainerRef = useRef<HTMLDivElement>(null);
 
   const handleInput = () => {
     if (textareaRef.current) {
       textareaRef.current.style.height = "auto";
       textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
+    }
+  };
+
+  const handleSearchInput = () => {
+    if (searchInputRef.current && searchContainerRef.current) {
+      if (searchInputRef.current.value) {
+        searchContainerRef.current.classList.add("active");
+      } else {
+        searchContainerRef.current.classList.remove("active");
+      }
     }
   };
 
@@ -122,8 +134,11 @@ export default function Home() {
           />
         </section>
       </main>
-      <footer className="md:flex hidden w-2/3 min-h-screen">
-
+      <footer className="md:flex justify-center hidden px-9 py-2 w-1/2 min-h-screen">
+        <section ref={searchContainerRef} className="flex items-center px-2 w-full search-input max-h-10">
+          <IoSearchOutline className="icon" />
+          <input ref={searchInputRef} onInput={handleSearchInput} className="bg-transparent outline-none" type="text" name="" id="" title="Search" placeholder="Search..." />
+        </section>
       </footer>
       <nav className="right-0 bottom-0 left-0 fixed flex justify-around items-center md:hidden bg-neutral-900 p-2">
         <MenuOption href="#" icon={IoHomeOutline} label="Home" />
