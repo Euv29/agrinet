@@ -36,10 +36,10 @@ export default function Home() {
             <MenuOption href="#" icon={IoPeopleOutline} label="Communities" />
             <MenuOption href="#" icon={IoPersonOutline} label="Profile" />
             <MenuOption href="#" icon={IoEllipsisHorizontalOutline} label="More" />
-            <Button className="px-24 py-4 w-full font-bold btn-neutral" type="button">Post</Button>
+            <Button className="md:flex hidden px-24 py-4 w-full font-bold btn-neutral" type="button">Post</Button>
           </section>
           <a href=""  className="flex justify-between items-center w-full menu-option profile-info user-option">
-            <section className="flex items-center gap-2">
+            <section className="md:flex items-center gap-2 hidden">
               <section className="bg-neutral-800 rounded-full w-[50px] h-[50px] user-img">
                 <Image src="/image.jpg" alt="user" width={100} height={100} />
               </section>
@@ -48,7 +48,7 @@ export default function Home() {
                 <p className="text-neutral-600 text-xs">@johndoe</p>
               </section>
             </section>
-              <IoEllipsisHorizontalOutline className="icon menu-icon" />
+              <IoEllipsisHorizontalOutline className="md:flex hidden icon menu-icon" />
           </a>
         </nav>
       </header>
@@ -122,7 +122,9 @@ export default function Home() {
           />
         </section>
       </main>
-      <footer className="md:flex hidden w-2/3 min-h-screen">footer</footer>
+      <footer className="md:flex hidden w-2/3 min-h-screen">
+      
+      </footer>
     </div>
   );
 }
